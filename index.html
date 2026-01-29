@@ -1,39 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>PPC Library</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia PPC</title>
+    <style>
+        /* Colores base */
+        :root {
+            --beige: #f5f1ea;
+            --naranja: #ff6f3c;
+            --negro: #1a1a1a;
+        }
+
+        /* Reset y base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--beige);
+            color: var(--negro);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--naranja);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: var(--negro);
+            color: var(--beige);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1em;
+            color: var(--beige);
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--naranja);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--naranja);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        footer {
+            background-color: var(--negro);
+            color: var(--beige);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: var(--naranja);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff4f1a;
+        }
+    </style>
 </head>
 <body>
-
-  <main class="container">
-
-    <header class="hero">
-      <img src="assets/portrait.jpg" alt="Portrait" class="portrait">
-      <h1>PPC Library</h1>
-      <p class="subtitle">
-        A practical, no-bullshit knowledge base on Google Ads and Meta Ads.
-      </p>
+    <header>
+        <h1>Agencia PPC</h1>
+        <p>Optimización y gestión de anuncios en Google Ads y Meta</p>
+        <nav>
+            <a href="#servicios">Servicios</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
-    <section class="links">
-      <h2>Sections</h2>
-      <ul>
-        <li><a href="google-ads/">Google Ads</a></li>
-        <li><a href="meta-ads/">Meta Ads</a></li>
-      </ul>
-    </section>
+    <main>
+        <!-- Sección de Servicios -->
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Google Ads</h3>
+                    <p>Campañas optimizadas para ROI máximo y segmentación precisa.</p>
+                </div>
+                <div class="card">
+                    <h3>Meta Ads</h3>
+                    <p>Publicidad efectiva en Facebook e Instagram con resultados medibles.</p>
+                </div>
+                <div class="card">
+                    <h3>Ecommerce</h3>
+                    <p>Estrategias avanzadas para tiendas online que aumentan ventas y conversiones.</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="about">
-      <p>
-        This site is a living library of PPC concepts, frameworks, mistakes and
-        strategies built from hands-on experience.
-      </p>
-    </section>
+        <!-- Sección de Portfolio -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Cliente A</h3>
+                    <p>Aumento del 150% en conversiones en 3 meses.</p>
+                </div>
+                <div class="card">
+                    <h3>Cliente B</h3>
+                    <p>Reducción del CPC en un 40% con campañas optimizadas.</p>
+                </div>
+            </div>
+        </section>
 
-  </main>
+        <!-- Sección de Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="card">
+                <form class="contact-form">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <p>© 2026 Agencia PPC | Hecho con ❤️</p>
+    </footer>
 </body>
 </html>
