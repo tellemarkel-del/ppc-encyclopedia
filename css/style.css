@@ -2,16 +2,18 @@
 :root {
     --white: #ffffff;
     --black: #1a1a1a;
-    --google-blue: #4285F4;
-    --meta-blue: #1877F2;
+    --blue-primary: #0066ff;
+    --blue-hover: #0052cc;
+    --gray-light: #f7f7f7;
+    --gray-border: #e0e0e0;
 }
 
-/* BASE */
+/* GLOBAL RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -20,153 +22,134 @@ body {
     line-height: 1.6;
 }
 
-header {
+/* HERO */
+.hero {
+    background: var(--blue-primary);
+    color: var(--white);
     text-align: center;
-    padding: 50px 20px 20px 20px;
+    padding: 80px 20px 60px 20px;
 }
 
-header h1 {
-    font-size: 3em;
+.hero h1 {
+    font-size: 3.2em;
     margin-bottom: 10px;
 }
 
-header p {
+.hero p {
     font-size: 1.2em;
-    color: #555;
+    margin-bottom: 25px;
 }
 
-/* SPACERS */
-.spacer {
-    height: 60px;
+.hero-btn {
+    background: var(--white);
+    color: var(--blue-primary);
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
 }
 
-/* CENTER SECTION */
-.center-section {
+/* SECTIONS */
+main {
+    padding: 60px 20px;
+}
+
+/* CHOOSE PATH */
+.choose-path {
     text-align: center;
-    padding: 20px;
-}
-
-.button-group {
     margin-bottom: 40px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 35px;
-    margin: 10px;
-    border-radius: 50px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    transition: all 0.3s ease;
+.choose-path h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.path-buttons .btn {
+    margin: 0 15px;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    color: var(--white);
 }
 
 .google-btn {
-    background-color: var(--google-blue);
-}
-
-.google-btn:hover {
-    background-color: #3367D6;
+    background: var(--blue-primary);
 }
 
 .meta-btn {
-    background-color: var(--meta-blue);
+    background: #1877f2;
 }
 
+.google-btn:hover,
 .meta-btn:hover {
-    background-color: #155db2;
+    opacity: 0.85;
 }
 
-/* IMAGE PLACEHOLDER */
-.image-placeholder {
+/* CENTER IMAGE */
+.center-image {
     margin: 40px auto;
     max-width: 500px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.image-placeholder img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* CONTENT BOXES */
-.content-box {
-    background-color: var(--black);
-    color: var(--white);
-    padding: 25px;
+/* INFO SECTIONS */
+.info-section {
+    background: var(--gray-light);
+    padding: 30px 20px;
     margin: 20px auto;
-    max-width: 800px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* SECTIONS */
-section h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-section h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--google-blue);
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
-}
-
-/* FORM */
-.form-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.contact-form {
-    max-width: 500px;
-    width: 100%;
-    padding: 30px;
-    background-color: #f9f9f9;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.contact-form input {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    max-width: 900px;
+    text-align: center;
+}
+
+.info-section h3 {
+    margin-bottom: 12px;
+}
+
+/* FORM SECTION */
+.form-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.lead-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background: var(--gray-light);
+    border-radius: 15px;
+    border: 1px solid var(--gray-border);
+}
+
+.lead-form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
     font-size: 1em;
 }
 
-.contact-form button {
+.form-btn {
     width: 100%;
-    padding: 12px 15px;
-    background-color: var(--google-blue);
-    color: #fff;
+    background: var(--blue-primary);
+    color: var(--white);
+    padding: 12px;
+    border-radius: 8px;
     font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #3367D6;
+.form-btn:hover {
+    background: var(--blue-hover);
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 30px 20px;
-    background-color: #f0f0f0;
-    color: #333;
+    font-size: 0.9em;
+    color: #555;
 }
