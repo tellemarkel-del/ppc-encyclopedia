@@ -7,70 +7,62 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>PPC Encyclopedia</h1>
-        <p>Your guide to mastering Google Ads & Meta Ads</p>
+
+    <!-- HERO / HEADER -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>PPC Encyclopedia</h1>
+            <p>Your definitive guide to mastering Google Ads & Meta Ads</p>
+            <a href="#contact" class="btn hero-btn">Contact Us</a>
+        </div>
     </header>
 
     <main>
-        <!-- Spacer -->
-        <div class="spacer"></div>
 
-        <!-- Buttons Section -->
-        <section class="center-section">
-            <div class="button-group">
+        <!-- SECTION: CHOOSE PATH -->
+        <section class="choose-path">
+            <h2>Explore Topics</h2>
+            <div class="path-buttons">
                 <a href="#google-ads" class="btn google-btn">Google Ads</a>
                 <a href="#meta-ads" class="btn meta-btn">Meta Ads</a>
             </div>
 
-            <!-- Image placeholder -->
-            <div class="image-placeholder">
-                <img src="your-image-1024x1024.png" alt="PPC Illustration" width="1024" height="1024">
+            <!-- IMAGE AREA -->
+            <div class="center-image">
+                <img src="your-central-image.png" alt="PPC Illustration" width="1024" height="1024">
             </div>
         </section>
 
-        <!-- Spacer -->
-        <div class="spacer"></div>
-
-        <!-- Google Ads Section -->
-        <section id="google-ads">
-            <h2>Google Ads</h2>
-            <div class="content-box">
-                <p>Foundations, campaign types, targeting options, bidding strategies, and more.</p>
-            </div>
+        <!-- SECTION: GOOGLE ADS -->
+        <section id="google-ads" class="info-section">
+            <h3>Google Ads Foundations</h3>
+            <p>Learn the core principles, campaign types, bidding strategies, and key metrics to master Google Ads.</p>
         </section>
 
-        <!-- Meta Ads Section -->
-        <section id="meta-ads">
-            <h2>Meta Ads</h2>
-            <div class="content-box">
-                <p>Foundations, campaign types, audiences, creative strategies, and more.</p>
-            </div>
+        <!-- SECTION: META ADS -->
+        <section id="meta-ads" class="info-section">
+            <h3>Meta Ads Foundations</h3>
+            <p>Explore Facebook & Instagram advertising basics, audience setup, creatives, and optimization tactics.</p>
         </section>
 
-        <!-- Spacer -->
-        <div class="spacer"></div>
-
-        <!-- Contact Form -->
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <div class="form-container">
-                <form class="contact-form">
-                    <input type="text" placeholder="First Name" required>
-                    <input type="text" placeholder="Last Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Phone" required>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+        <!-- CONTACT / LEAD FORM -->
+        <section id="contact" class="form-section">
+            <h2>Stay Updated</h2>
+            <p>Leave your details to get access to deeper PPC guides and insights.</p>
+            <form class="lead-form">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <button type="submit" class="btn form-btn">Submit</button>
+            </form>
         </section>
 
-        <!-- Spacer -->
-        <div class="spacer"></div>
     </main>
 
     <footer>
-        <p>© 2026 PPC Encyclopedia | Designed with ❤️</p>
+        <p>© 2026 PPC Encyclopedia</p>
     </footer>
+
 </body>
 </html>
